@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "Without Distractions",
+    "version": "1.0",
+    "description": "Web sites can be confusing . Images , different fonts and the others . This extension provide to see contents in a clear way.",
+    "permissions": [
+       
+        "tabs",
+        "scripting",
+        "activeTab"
+      ],
+      "host_permissions": ["http://*/*", "https://*/*"],
+      "content_scripts": [
+        {
+          "matches": ["https://www.freecodecamp.org/*"],
+          "js": ["content.js"]
+        }
+      ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "mind.png"
+    }
+    
+    
+}

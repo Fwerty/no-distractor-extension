@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Popup</title>
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+   <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+   <style>
+       body {
+           width: 780px;
+           height: 900px;
+           font-family: 'Arial';
+           padding: 20px; 
+       }
+       .gradient-custom {
+        /* fallback for old browsers */
+        background: #6a11cb;
+        /* Chrome 10-25, Safari 5.1-6 */
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background: linear-gradient(to right, #b287e0, #73a3f6);
+
+    }
+    i {
+        font-size: 1.3rem;
+        margin: 0 5px;
+      }
+       h1 {
+           color: #333;
+       }
+       .custom-frame {
+            background-color: #ffffff;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .form-control {
+            margin-bottom: 15px;
+        }
+        .form-select {
+            width: 100%;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ced4da;
+        }
+        .form-select:focus {
+            border-color: #80bdff;
+            outline: 0;
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+        }
+        .form-input {
+            width: 100%;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ced4da;
+        }
+        .form-input:focus {
+            border-color: #80bdff;
+            outline: 0;
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+        }
+        ::-webkit-scrollbar {
+            width: 5px; /* Kaydırma çubuğunun genişliği */
+            height: 10px; /* Kaydırma çubuğunun yüksekliği */
+            background-color: #7d7d7d; /* Kaydırma çubuğunun arka plan rengi */
+            border-radius: 5px; /* Kaydırma çubuğunun köşe yarıçapı */
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background-color: #767676; /* Kaydırma düğmesinin arka plan rengi */
+            border-radius: 5px; /* Kaydırma düğmesinin köşe yarıçapı */
+        }
+        
+        ::-webkit-scrollbar-track {
+            background-color: #2d2d2d; /* Kaydırma çubuğunun arka plan rengi */
+        }
+        input[type="color"] {
+            
+            border: none;
+            width: 25px;
+            height:25px;
+        }
+        input[type="color"]::-webkit-color-swatch-wrapper {
+            border: solid 2px #000; 
+            padding: 0;
+        }
+        input[type="color"]::-webkit-color-swatch {
+            border: solid 1px #000; /*change color of the swatch border here*/
+            
+            border: none;
+        }
+        /**/
+        .github {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.3rem;
+            margin: 10px 0;
+          }
+        
+        
+   </style>
+</head>
+<body class="gradient-custom">
+    <!-- <button id="toggleButton">Arka Planı Blur Yap</button> -->
+    <img  src="water-drop.png" id="toggleButton" style="width: 25px;height: 25px;margin-right: 18px;margin-top: 3px;margin-bottom: 10px;" alt="Italian Trulli">
+    <label class="form-label" for="bgColorSelect1"></label>
+    <label class="form-label" for="bgColorSelect2"></label>
+    <input type="color" id="bgColorSelect1"  value="#93D585">
+    <input type="color" id="bgColorSelect2"  value="#9AB0D6">
+    
+    <div class="custom-frame">
+        <form>
+            <label class="form-label" for="fontSelect">Font:</label>
+            <select class="form-select" id="fontSelect" aria-label="Default select example">
+                <option  value="Arial">Arial</option>
+                <option value="Verdana">Verdana</option>
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Helvetica">Helvetica</option>
+                <option value="Courier New">Courier New</option>
+                <option value="Tahoma">Tahoma</option>
+                <option value="Trebuchet MS">Trebuchet MS</option>
+                <option value="Impact">Impact</option>
+
+
+            </select>
+            <label class="form-label" style="margin-top: 10px;" for="fontSizeSelect">Font Boyutu:</label>
+            <input class="form-input" style="margin-bottom: 10px;" type="number" id="fontSizeSelect" min="10" max="50" value="17"> 
+
+        
+        </form>
+                 </div>
+   <br>
+    <div id="content"></div>
+   
+    <!-- <script src="blur.js"></script> -->
+    <script src="content.js"></script>
+
+ </body>
+</html>
